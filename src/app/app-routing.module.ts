@@ -1,0 +1,40 @@
+import { HomeComponent } from "./pages/home/home.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { RegisterComponent } from "./pages/register/register.component";
+import { ForgotComponent } from "./pages/forgot/forgot.component";
+import { AuthGuardService } from "ng6-md-auth";
+import { HistoryComponent } from "./pages/history/history.component";
+import { ReviewComponent } from "./pages/review/review.component";
+import { TempleComponent } from "./pages/temple/temple.component";
+import { OtherplaceComponent } from "./pages/otherplace/otherplace.component";
+import { RestaurantComponent } from "./pages/restaurant/restaurant.component";
+import { CafeComponent } from "./pages/cafe/cafe.component";
+
+const routes: Routes = [
+  {
+    path: "home",
+    redirectTo: "home",
+    pathMatch: "full"
+  },
+  { path: "home", component: HomeComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
+  { path: "forgot", component: ForgotComponent },
+  { path: "history", component: HistoryComponent },
+  { path: "review", component: ReviewComponent },
+  { path: "temple", component: TempleComponent },
+  { path: "otherplace", component: OtherplaceComponent },
+  { path: "restaurant", component: RestaurantComponent },
+  { path: "cafe", component: CafeComponent }
+  
+
+  
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
