@@ -1,3 +1,6 @@
+import { OtherplaceService } from './pages/otherplace/otherplace.service';
+import { CafeService } from './pages/cafe/cafe.service';
+import { RestaurantService } from './pages/restaurant/restaurant.service';
 import { TempleService } from './pages/temple/temple.service';
 import { ReviewService } from './pages/review/review.service';
 import { PlaceService } from './pages/place/place.service';
@@ -32,9 +35,9 @@ const routes: Routes = [
   { path: "history", component: HistoryComponent, resolve: [ HistoryService ]},
   { path: "review", component: ReviewComponent , resolve: [ ReviewService ]},
   { path: "temple", component: TempleComponent, resolve: [ TempleService ]},
-  { path: "otherplace", component: OtherplaceComponent },
-  { path: "restaurant", component: RestaurantComponent },
-  { path: "cafe", component: CafeComponent },
+  { path: "otherplace", component: OtherplaceComponent, resolve: [ OtherplaceService ] },
+  { path: "restaurant", component: RestaurantComponent , resolve: [ RestaurantService ]},
+  { path: "cafe", component: CafeComponent , resolve: [ CafeService ]},
   { path: "place", component: PlaceComponent, resolve: [ PlaceService ]},
   { path: "contact", component: ContactComponent },
   { path: "admin", component: AdminComponent}

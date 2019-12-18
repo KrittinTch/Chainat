@@ -1,3 +1,28 @@
-<p>
-  otherplace works!
-</p>
+<header>
+  <h2 class="text-center header">
+    ร้านอาหารในจังหวัดชัยนาท
+  </h2>
+</header>
+
+<body>
+
+  <div class="row">
+    <div class="col-12" *ngFor="let otherplace of otherplace.otherplace">
+      <img [src]="otherplace.image" class="card-img-top img-center" alt="...">
+      <h4 class="text-center header">
+        {{otherplace.name}}
+      </h4>
+      <p class="text-center p-temple">
+        {{otherplace.description}}
+      </p>
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/214/214335.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/214/214280.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/214/214333.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/776/776568.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/776/776509.png" >
+    </div>
+  </div>
+
+ 
+ 
+ </body>

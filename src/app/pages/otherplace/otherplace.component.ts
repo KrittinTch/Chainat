@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OtherplaceService } from './otherplace.service';
 
 @Component({
   selector: 'app-otherplace',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./otherplace.component.scss']
 })
 export class OtherplaceComponent implements OnInit {
+  otherplace: any;
 
-  constructor() { }
+  constructor(public otherplaceservice: OtherplaceService) { }
 
   ngOnInit() {
+    this.otherplaceservice.OnotherplaceDataChanged.subscribe((res: any) => {
+      this.otherplace = res[0];
+      console.log(this.otherplace)
+    })
   }
+
 
 }

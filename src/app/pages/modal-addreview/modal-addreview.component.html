@@ -1,6 +1,39 @@
-<input matInput placeholder="name" [(ngModel)]="datareview.name">
-<input matInput placeholder="description" [(ngModel)]="datareview.description">
-<input matInput placeholder="location" [(ngModel)]="datareview.location">
-<input matInput placeholder="imageUrl" [(ngModel)]="datareview.imageurl">
+<header>
+    <h2 class="modal-text-head text-center">
+        เพิ่มการรีวิว
+    </h2>
+</header>
 
-<button (click)="onOk()"></button>
+<body>
+
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field>
+                <input matInput placeholder="ชื่อสถานที่" [(ngModel)]="datareview.name">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field>
+                <input matInput placeholder="ที่ตั้งของสถานที่" [(ngModel)]="datareview.location">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="example-full-width">
+                <input matInput #message maxlength="200" placeholder="รายละเอียดการรีวิว" [(ngModel)]="datareview.description">
+                <mat-hint align="end">{{message.value.length}} / 200</mat-hint>
+            </mat-form-field>
+        </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput placeholder="Url รูปภาพ"  [(ngModel)]="datareview.imageurl">
+                </mat-form-field>
+            </div>
+        
+    </div>
+
+    <div class="row">
+        <button mat-raised-button class="btn-save" (click)="onOk()">บันทึก</button>
+    </div>
+</body>

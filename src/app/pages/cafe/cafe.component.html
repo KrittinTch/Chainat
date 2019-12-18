@@ -1,3 +1,28 @@
-<p>
-  cafe works!
-</p>
+<header>
+  <h2 class="text-center header">
+    ร้านกาแฟในจังหวัดชัยนาท
+  </h2>
+</header>
+
+<body>
+
+  <div class="row">
+    <div class="col-12" *ngFor="let cafedata2 of cafedata2.cafe">
+      <img [src]="cafedata2.image" class="card-img-top img-center" alt="...">
+      <h4 class="text-center header">
+        {{cafedata2.name}}
+      </h4>
+      <p class="text-center p-temple">
+        {{cafedata2.description}}
+      </p>
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1095/1095198.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/169/169884.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/2389/2389648.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/135/135765.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1322/1322184.png" >
+    </div>
+  </div>
+
+ 
+ 
+ </body>

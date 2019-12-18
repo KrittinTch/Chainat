@@ -1,56 +1,117 @@
 <header>
-  <h1 class="header-text">
+  <h2 class="header-text text-center">
     หมวดหมู่สถานที่ท่องเที่ยว
-  </h1>
+  </h2>
 </header>
 
 <body>
- <div class="row">
-   <div class="col-4"  *ngFor="let temple of placedata.temple">
-    <div class="card" style="width: 18rem;">
-      <img [src]="temple.image" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{temple.name}}</h5>
-        <p class="card-text text-ellipsis">{{temple.description}}</p>
-      </div>
+  <div class="row">
+    <div class="col-6">
+      <h3 class="text-card">
+        วัดในจังหวัดชัยนาท
+      </h3>
     </div>
-   </div>
- </div>
-
- <div class="row">
-  <div class="col-4"  *ngFor="let restaurant of placedata.restaurant">
-   <div class="card" style="width: 18rem;">
-     <img [src]="restaurant.image" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">{{restaurant.name}}</h5>
-       <p class="card-text text-ellipsis">{{restaurant.description}}</p>
-     </div>
-   </div>
+    <div class="col-6" (click)="onToTemple()">
+      <p class="seemore cursor">
+        ดูรายละเอียด >>
+      </p>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-4"  *ngFor="let cafe of placedata.cafe">
-   <div class="card" style="width: 18rem;">
-     <img [src]="cafe.image" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">{{cafe.name}}</h5>
-       <p class="card-text text-ellipsis">{{cafe.description}}</p>
-     </div>
-   </div>
+  <div class="row card-border">
+    <mat-card class="col-4 example-card card" *ngFor="let temple of placedata.temple">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="text-ellipsis text-card-header">{{temple.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img-card" [src]="temple.image">
+      <mat-card-content>
+        <p class="text-ellipsis p-card">
+          {{temple.description}}
+        </p>
+      </mat-card-content>
+    </mat-card>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-4"  *ngFor="let otherplace of placedata.otherplace">
-   <div class="card" style="width: 18rem;">
-     <img [src]="otherplace.image" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">{{otherplace.name}}</h5>
-       <p class="card-text text-ellipsis">{{otherplace.description}}</p>
-     </div>
-   </div>
+  <div class="row">
+    <div class="col-6">
+      <h3 class="header-text">
+        ร้านอาหารในจังหวัดชัยนาท
+      </h3>
+    </div>
+    <div class="col-6" (click)="onToRestaurant()">
+      <p class="seemore cursor">
+        ดูรายละเอียด >>
+      </p>
+    </div>
   </div>
-</div>
+  <div class="row card-border">
+    <mat-card class="col-4 example-card card" *ngFor="let restaurant of placedata.restaurant">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="text-ellipsis text-card-header">{{restaurant.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img-card" [src]="restaurant.image">
+      <mat-card-content>
+        <p class="text-ellipsis p-card">
+          {{restaurant.description}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h3 class="header-text">
+        ร้านกาแฟในจังหวัดชัยนาท
+      </h3>
+    </div>
+    <div class="col-6" (click)="onToCafe()">
+      <p class="seemore cursor">
+        ดูรายละเอียด >>
+      </p>
+    </div>
+  </div>
+  <div class="row card-border">
+    <mat-card class="col-4 example-card card" *ngFor="let cafe of placedata.cafe">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="text-ellipsis text-card-header">{{cafe.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img-card" [src]="cafe.image">
+      <mat-card-content>
+        <p class="text-ellipsis p-card">
+          {{cafe.description}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h3 class="header-text">
+        สถานที่อื่นๆในจังหวัดชัยนาท
+      </h3>
+    </div>
+    <div class="col-6" (click)="onToOtherplace()">
+      <p class="seemore cursor">
+        ดูรายละเอียด >>
+      </p>
+    </div>
+  </div>
+  <div class="row card-border">
+    <mat-card class="col-4 example-card card" *ngFor="let otherplace of placedata.otherplace">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="text-ellipsis text-card-header">{{otherplace.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img-card" [src]="otherplace.image">
+      <mat-card-content>
+        <p class="text-ellipsis p-card">
+          {{otherplace.description}}
+        </p>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
 
 </body>

@@ -1,20 +1,28 @@
 <header>
-  <h1>
+  <h2 class="text-center header">
     วัดในจังหวัดชัยนาท
-  </h1>
+  </h2>
 </header>
 
 <body>
+
   <div class="row">
-    <div class="col-4"  *ngFor="let temple2 of placedata2.temple">
-     <div class="card" style="width: 18rem;">
-       <img [src]="temple2.image" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">{{temple2.name}}</h5>
-         <p class="card-text text-ellipsis">{{temple2.description}}</p>
-       </div>
-     </div>
+    <div class="col-12" *ngFor="let temple2 of placedata2.temple">
+      <img [src]="temple2.image" class="card-img-top img-center" alt="...">
+      <h4 class="text-center header">
+        {{temple2.name}}
+      </h4>
+      <p class="text-center p-temple">
+        {{temple2.description}}
+      </p>
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1778/1778319.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1019/1019254.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1778/1778319.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1019/1019254.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1778/1778319.png" >
     </div>
   </div>
+
+ 
  
  </body>

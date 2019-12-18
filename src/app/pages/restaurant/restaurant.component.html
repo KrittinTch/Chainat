@@ -1,3 +1,28 @@
-<p>
-  restaurant works!
-</p>
+<header>
+  <h2 class="text-center header">
+    ร้านอาหารในจังหวัดชัยนาท
+  </h2>
+</header>
+
+<body>
+
+  <div class="row">
+    <div class="col-12" *ngFor="let restaurant2 of restaurantdata2.restaurant">
+      <img [src]="restaurant2.image" class="card-img-top img-center" alt="...">
+      <h4 class="text-center header">
+        {{restaurant2.name}}
+      </h4>
+      <p class="text-center p-temple">
+        {{restaurant2.description}}
+      </p>
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/851/851064.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/599/599944.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/1357/1357914.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/706/706164.png" >
+      <img class="icon" src="https://image.flaticon.com/icons/png/512/776/776495.png" >
+    </div>
+  </div>
+
+ 
+ 
+ </body>

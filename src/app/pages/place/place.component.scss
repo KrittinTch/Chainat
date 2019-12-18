@@ -8,19 +8,52 @@
 }
 
 .text-card-header{
-    margin-top: -18px;
-    border-bottom: 1px solid;
     font-family: 'Kanit', sans-serif;
 }
 
 .card-border{
-    border: 1px black;
+    border: 1px solid;
+    border-color: gray;
 }
 
 .text-ellipsis{
     white-space: nowrap; 
-    width: 240px; 
+    width: 350px; 
     overflow: hidden;
     text-overflow: ellipsis; 
-    
+  }
+
+.card{
+    margin-top: 20px;
+    margin-left: 125px;
+    margin-bottom: 20px;
+}
+
+.img-card{
+    width: 350px;
+    min-height: 120px;
+    max-height: 220px;
+    margin-left: 0.5px;
+}
+
+.text-card{
+    margin-top: 30px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.seemore{
+    margin-top: 36px;
+    margin-left: 410px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    color: crimson;
+}
+
+.p-card{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+.cursor {
+    cursor: pointer;
   }

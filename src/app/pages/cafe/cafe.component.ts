@@ -1,3 +1,4 @@
+import { CafeService } from './cafe.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cafe.component.scss']
 })
 export class CafeComponent implements OnInit {
+  cafedata2: any;
 
-  constructor() { }
+  constructor(public cafeService: CafeService) { }
 
   ngOnInit() {
+    this.cafeService.OncafeDataChanged.subscribe((res: any) => {
+      this.cafedata2 = res[0];
+      console.log(this.cafedata2)
+    })
   }
 
 }

@@ -24,7 +24,6 @@ export class ReviewComponent implements OnInit {
   addreview(): void {
     const dialogRef = this.dialog.open(ModalAddreviewComponent, {
       width: '500px',
-      // data: {name: this.name, animal: this.animal}
     });
 
     dialogRef.afterClosed().subscribe(result => {

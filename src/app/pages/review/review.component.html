@@ -1,23 +1,38 @@
 <header>
-review
-
+  <h2 class="header-text text-center">
+    รีวิวสถานที่
+  </h2>
 </header>
 
 <body>
+<div class="row">
+  <div class="col-12">
+    <img class="review-img" (click)="addreview()" src="https://image.flaticon.com/icons/png/512/457/457555.png">
+    <p class="p-review">เพิ่มรีวิว</p>
+  </div>
 
-  <button (click)="addreview()">5555555</button>
+</div>
 
-  <div class="row">
-    <div class="col-4"  *ngFor="let review of reviewdata">
-     <div class="card" style="width: 18rem;">
-       <img [src]="review.image" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">{{review.name}}</h5>
-         <p class="card-text text-ellipsis">{{review.location}}</p>
-         <p class="card-text text-ellipsis">{{review.description}}</p>
-       </div>
-     </div>
-    </div>
+
+
+
+  <div class="row card-border">
+    <mat-card class="col-4 example-card card" *ngFor="let review of reviewdata">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="text-ellipsis text-card-header">{{review.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img-card" [src]="review.imageurl">
+      <mat-card-content>
+        <p class="p-card">
+         <img class="icon" src="https://image.flaticon.com/icons/png/512/457/457399.png">{{review.description}}
+        </p>
+        <p class="p-card">
+          <img class="icon" src="https://image.flaticon.com/icons/png/512/956/956817.png" alt="">{{review.location}}
+        </p>
+
+      </mat-card-content>
+    </mat-card>
   </div>
 
 </body>
