@@ -1,13 +1,13 @@
 <mat-toolbar class="stick-header header">
   <mat-toolbar-row class="container">
     <div class="logo cursor" (click)="onClickToHome()">
-      <h3>CHAINAT </h3>
+      <h3 class="logo-text">CHAINAT</h3>
     </div>
-    <div>
-      <h3>CHAINAT </h3>
+    <div >
+      <img class="logo-icon" src="https://image.flaticon.com/icons/png/512/1018/premium/1018472.png" >
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar">
+    <nav class="navbar navbar-expand-lg navbar text">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,23 +21,17 @@
           <li class="nav-item">
             <a class="nav-link cursor" (click)="onClickToHistory()">ประวัติ</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              หมวดหมู่
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item cursor" (click)="onClickToTemple()">วัด</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item cursor" (click)="onClickToOtherplace()">สถานที่ท่องเที่ยว</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item cursor" (click)="onClickToRestaurant()">ร้านอาหาร</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item cursor" (click)="onClickToCafe()">ร้านกาแฟ</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link cursor" (click)="onClickToPlaces()">สถานที่ท่องเที่ยว</a>
           </li>
+
+          
           <li class="nav-item">
             <a class="nav-link cursor" (click)="onClickToReview()">เพิ่มริวิว</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link cursor" (click)="onClickToContact()">ติดต่อ</a>
           </li>
         </ul>
       </div>

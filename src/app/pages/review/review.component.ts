@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { ModalAddreviewComponent } from '../modal-addreview/modal-addreview.component';
 
 @Component({
   selector: 'app-review',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  addreview(): void {
+    const dialogRef = this.dialog.open(ModalAddreviewComponent, {
+      width: '250px',
+      // data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      const aaa = result;
+      console.log(aaa);
+    });
+  }
+
 }
+
+
+

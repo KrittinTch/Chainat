@@ -1,3 +1,5 @@
+import { PlaceService } from './pages/place/place.service';
+import { HistoryService } from './pages/history/history.service';
 import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { NgModule } from "@angular/core";
@@ -11,10 +13,12 @@ import { TempleComponent } from "./pages/temple/temple.component";
 import { OtherplaceComponent } from "./pages/otherplace/otherplace.component";
 import { RestaurantComponent } from "./pages/restaurant/restaurant.component";
 import { CafeComponent } from "./pages/cafe/cafe.component";
+import { PlaceComponent } from './pages/place/place.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "",
     redirectTo: "home",
     pathMatch: "full"
   },
@@ -22,12 +26,14 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "forgot", component: ForgotComponent },
-  { path: "history", component: HistoryComponent },
+  { path: "history", component: HistoryComponent, resolve: [ HistoryService ]},
   { path: "review", component: ReviewComponent },
   { path: "temple", component: TempleComponent },
   { path: "otherplace", component: OtherplaceComponent },
   { path: "restaurant", component: RestaurantComponent },
-  { path: "cafe", component: CafeComponent }
+  { path: "cafe", component: CafeComponent },
+  { path: "place", component: PlaceComponent, resolve: [ PlaceService ]},
+  { path: "contact", component: ContactComponent },
   
 
   

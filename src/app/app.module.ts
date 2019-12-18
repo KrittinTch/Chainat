@@ -22,6 +22,11 @@ import { TempleComponent } from './pages/temple/temple.component';
 import { OtherplaceComponent } from './pages/otherplace/otherplace.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { CafeComponent } from './pages/cafe/cafe.component';
+import { PlaceComponent } from './pages/place/place.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ModalAddreviewComponent } from './pages/modal-addreview/modal-addreview.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -39,7 +44,10 @@ const apiSrvCfg = environment;
     TempleComponent,
     OtherplaceComponent,
     RestaurantComponent,
-    CafeComponent
+    CafeComponent,
+    PlaceComponent,
+    ContactComponent,
+    ModalAddreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +59,12 @@ const apiSrvCfg = environment;
     HttpClientModule,
     NgxSpinnerModule,
     SlideshowModule,
+    SlideshowModule,
+    MatDialogModule,
     AuthModule.forRoot(apiSrvCfg)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalAddreviewComponent],
 })
 export class AppModule {}

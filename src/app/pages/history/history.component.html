@@ -1,3 +1,32 @@
-<p>
-  history works!
-</p>
+<header >
+  <h1 class="header-text" *ngIf="historydata[0] && historydata[0].historyname">
+    {{historydata[0].historyname}}
+  </h1>
+</header>
+
+<body>
+
+  <div class="container border" *ngIf="historydata[0] && historydata[0].historyimage">
+    <div class="row">
+      <div class="col-6" >
+        <img class="img" [src]="historydata[0].historyimage">
+      </div>
+      <div class="col-6">
+        <p class="p-text">
+          {{historydata[0].historydescription}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+

@@ -1,0 +1,26 @@
+.header-text{
+    margin-top: 25px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.margin-card{
+    margin-top: 25px;
+}
+
+.text-card-header{
+    margin-top: -18px;
+    border-bottom: 1px solid;
+    font-family: 'Kanit', sans-serif;
+}
+
+.card-border{
+    border: 1px black;
+}
+
+.text-ellipsis{
+    white-space: nowrap; 
+    width: 240px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    
+  }
