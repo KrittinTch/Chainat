@@ -1,13 +1,21 @@
 <div class="content">
     <div class="row mt-5">
         <div class="col-md-7 col-sm-12">
-            <img class="cover" src="http://comunytek.com/wp-content/uploads/2017/03/Microservices.png"
-                alt="">
+            <img src="https://image.flaticon.com/icons/png/512/1018/premium/1018472.png" alt="">
         </div>
 
-        <div class="col-md-5 col-sm-12">
-            <auth-login></auth-login>
+        <div style="padding-top: 60px;" class="col-md-5 col-sm-12">
+            <div>
+                <input matInput placeholder="Username" [(ngModel)]="data.username">
+                <input matInput placeholder="password" type="password" [(ngModel)]="data.password">
+            </div>
+            <div>
+                <button mat-button (click)="onSignIn()">SignIn</button>
+            </div>
+            <div style="color: red">
+                {{massage}}
+            </div>
         </div>
     </div>
-    
+
 </div>
