@@ -15,6 +15,7 @@ import { RestaurantComponent } from "./pages/restaurant/restaurant.component";
 import { CafeComponent } from "./pages/cafe/cafe.component";
 import { PlaceComponent } from './pages/place/place.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,7 @@ const routes: Routes = [
   { path: "cafe", component: CafeComponent },
   { path: "place", component: PlaceComponent, resolve: [ PlaceService ]},
   { path: "contact", component: ContactComponent },
-  
+  { path: "admin", component: AdminComponent}
 
   
 ];

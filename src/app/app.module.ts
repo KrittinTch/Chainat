@@ -26,6 +26,7 @@ import { PlaceComponent } from './pages/place/place.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ModalAddreviewComponent } from './pages/modal-addreview/modal-addreview.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 
@@ -47,7 +48,8 @@ const apiSrvCfg = environment;
     CafeComponent,
     PlaceComponent,
     ContactComponent,
-    ModalAddreviewComponent
+    ModalAddreviewComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
