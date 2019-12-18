@@ -1,3 +1,4 @@
+import { TempleService } from './temple.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./temple.component.scss']
 })
 export class TempleComponent implements OnInit {
+  placedata2: any;
 
-  constructor() { }
+  constructor(public templeService: TempleService) { }
 
   ngOnInit() {
+    this.templeService.OnPlaceData2Changed.subscribe((res: any) => {
+      this.placedata2 = res[0];
+      console.log(this.placedata2)
+    })
   }
 
 }

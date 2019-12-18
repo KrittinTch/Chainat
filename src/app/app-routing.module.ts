@@ -1,3 +1,5 @@
+import { TempleService } from './pages/temple/temple.service';
+import { ReviewService } from './pages/review/review.service';
 import { PlaceService } from './pages/place/place.service';
 import { HistoryService } from './pages/history/history.service';
 import { HomeComponent } from "./pages/home/home.component";
@@ -27,8 +29,8 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "forgot", component: ForgotComponent },
   { path: "history", component: HistoryComponent, resolve: [ HistoryService ]},
-  { path: "review", component: ReviewComponent },
-  { path: "temple", component: TempleComponent },
+  { path: "review", component: ReviewComponent , resolve: [ ReviewService ]},
+  { path: "temple", component: TempleComponent, resolve: [ TempleService ]},
   { path: "otherplace", component: OtherplaceComponent },
   { path: "restaurant", component: RestaurantComponent },
   { path: "cafe", component: CafeComponent },

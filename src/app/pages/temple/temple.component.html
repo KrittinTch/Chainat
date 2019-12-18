@@ -1,3 +1,20 @@
-<p>
-  temple works!
-</p>
+<header>
+  <h1>
+    วัดในจังหวัดชัยนาท
+  </h1>
+</header>
+
+<body>
+  <div class="row">
+    <div class="col-4"  *ngFor="let temple2 of placedata2.temple">
+     <div class="card" style="width: 18rem;">
+       <img [src]="temple2.image" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">{{temple2.name}}</h5>
+         <p class="card-text text-ellipsis">{{temple2.description}}</p>
+       </div>
+     </div>
+    </div>
+  </div>
+ 
+ </body>

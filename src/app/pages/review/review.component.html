@@ -7,4 +7,17 @@ review
 
   <button (click)="addreview()">5555555</button>
 
+  <div class="row">
+    <div class="col-4"  *ngFor="let review of reviewdata">
+     <div class="card" style="width: 18rem;">
+       <img [src]="review.image" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">{{review.name}}</h5>
+         <p class="card-text text-ellipsis">{{review.location}}</p>
+         <p class="card-text text-ellipsis">{{review.description}}</p>
+       </div>
+     </div>
+    </div>
+  </div>
+
 </body>
